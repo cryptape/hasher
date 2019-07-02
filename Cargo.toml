@@ -1,12 +1,12 @@
 [package]
-name = "cita-hash"
+name = "hasher"
 version = "0.1.0"
 authors = ["Cryptape Technologies <contact@cryptape.com>"]
 edition = "2018"
 description = "CITA Hash"
 license = "MIT"
-homepage = "https://github.com/cryptape/cita-hash"
-documentation = "https://github.com/cryptape/cita-hash/blob/master/README.md"
+homepage = "https://github.com/cryptape/hasher"
+documentation = "https://github.com/cryptape/hasher/blob/master/README.md"
 
 [dependencies]
 tiny-keccak = { version = "1.4", optional = true }

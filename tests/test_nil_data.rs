@@ -1,9 +1,9 @@
-use cita_hash::Hasher;
+use hasher::Hasher;
 
 #[cfg(feature = "hash-keccak")]
 #[test]
 fn test_keccak() {
-    let mut h = cita_hash::HasherKeccak::new();
+    let h = hasher::HasherKeccak::new();
     let r = h.hash(&[]);
     assert_eq!(
         r,
@@ -18,7 +18,7 @@ fn test_keccak() {
 #[cfg(feature = "hash-blake2b")]
 #[test]
 fn test_blake2b() {
-    let mut h = cita_hash::HasherBlake2B::new("CryptapeCryptape".as_bytes().to_vec());
+    let h = hasher::HasherBlake2B::new("CryptapeCryptape".as_bytes().to_vec());
     let r = h.hash(&[]);
     assert_eq!(
         r,
@@ -33,7 +33,7 @@ fn test_blake2b() {
 #[cfg(feature = "hash-sm3")]
 #[test]
 fn test_sm3() {
-    let mut h = cita_hash::HasherSM3::new();
+    let h = hasher::HasherSM3::new();
     let r = h.hash(&[]);
     assert_eq!(
         r,

@@ -1,11 +1,5 @@
 pub trait Hasher {
-    fn push(&mut self, bytes: &[u8]);
-    fn finish(&self) -> Vec<u8>;
-
-    fn hash(&mut self, data: &[u8]) -> Vec<u8> {
-        self.push(data);
-        self.finish()
-    }
+    fn hash(&self, data: &[u8]) -> Vec<u8>;
 }
 
 #[cfg(feature = "hash-keccak")]
