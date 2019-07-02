@@ -1,0 +1,20 @@
+[package]
+name = "cita-hash"
+version = "0.1.0"
+authors = ["Cryptape Technologies <contact@cryptape.com>"]
+edition = "2018"
+description = "CITA Hash"
+license = "MIT"
+homepage = "https://github.com/cryptape/cita-hash"
+documentation = "https://github.com/cryptape/cita-hash/blob/master/README.md"
+
+[dependencies]
+tiny-keccak = { version = "1.4", optional = true }
+blake2b-rs = { version = "0.1", optional = true }
+libsm = { version = "0.3", optional = true }
+
+[features]
+default = []
+hash-keccak = ["tiny-keccak"]
+hash-blake2b = ["blake2b-rs"]
+hash-sm3 = ["libsm"]
