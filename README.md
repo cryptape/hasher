@@ -4,7 +4,9 @@ Package `hasher` provides a Hasher trait.
 
 ```rs
 pub trait Hasher {
-    fn hash(&self, data: &[u8]) -> Vec<u8>;
+    const LENGTH: usize;
+
+    fn digest(&self, data: &[u8]) -> Vec<u8>;
 }
 ```
 

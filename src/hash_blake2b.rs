@@ -13,6 +13,8 @@ impl HasherBlake2B {
 }
 
 impl Hasher for HasherBlake2B {
+    const LENGTH: usize = 32;
+
     fn digest(&self, data: &[u8]) -> Vec<u8> {
         let mut dst = [0x00u8; 32];
         blake2b_rs::blake2b(&self.k, data, &mut dst);

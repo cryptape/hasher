@@ -11,6 +11,8 @@ impl HasherSM3 {
 }
 
 impl Hasher for HasherSM3 {
+    const LENGTH: usize = 32;
+
     fn digest(&self, data: &[u8]) -> Vec<u8> {
         let mut r = Vec::new();
         let h = libsm::sm3::hash::Sm3Hash::new(data).get_hash();

@@ -1,6 +1,6 @@
 [package]
 name = "hasher"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Cryptape Technologies <contact@cryptape.com>"]
 edition = "2018"
 description = "Package hasher provides a Hasher trait."
