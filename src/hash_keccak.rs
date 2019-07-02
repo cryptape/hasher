@@ -11,7 +11,7 @@ impl HasherKeccak {
 }
 
 impl Hasher for HasherKeccak {
-    fn hash(&self, data: &[u8]) -> Vec<u8> {
+    fn digest(&self, data: &[u8]) -> Vec<u8> {
         tiny_keccak::keccak256(data).to_vec()
     }
 }

@@ -4,7 +4,7 @@ use hasher::Hasher;
 #[test]
 fn test_keccak() {
     let h = hasher::HasherKeccak::new();
-    let r = h.hash(&[]);
+    let r = h.digest(&[]);
     assert_eq!(
         r,
         vec![
@@ -19,7 +19,7 @@ fn test_keccak() {
 #[test]
 fn test_blake2b() {
     let h = hasher::HasherBlake2B::new("CryptapeCryptape".as_bytes().to_vec());
-    let r = h.hash(&[]);
+    let r = h.digest(&[]);
     assert_eq!(
         r,
         vec![
@@ -34,7 +34,7 @@ fn test_blake2b() {
 #[test]
 fn test_sm3() {
     let h = hasher::HasherSM3::new();
-    let r = h.hash(&[]);
+    let r = h.digest(&[]);
     assert_eq!(
         r,
         vec![

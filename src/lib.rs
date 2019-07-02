@@ -1,5 +1,5 @@
 pub trait Hasher {
-    fn hash(&self, data: &[u8]) -> Vec<u8>;
+    fn digest(&self, data: &[u8]) -> Vec<u8>;
 }
 
 #[cfg(feature = "hash-keccak")]

@@ -13,7 +13,7 @@ impl HasherBlake2B {
 }
 
 impl Hasher for HasherBlake2B {
-    fn hash(&self, data: &[u8]) -> Vec<u8> {
+    fn digest(&self, data: &[u8]) -> Vec<u8> {
         let mut dst = [0x00u8; 32];
         blake2b_rs::blake2b(&self.k, data, &mut dst);
         dst.to_vec()
