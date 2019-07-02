@@ -8,6 +8,19 @@ pub trait Hasher {
 }
 ```
 
+Add this to your `Cargo.toml`:
+
+```toml
+[dependencies]
+hasher = "0.1"
+```
+
+# Supported algorithms
+
+- blake2b
+- keccak
+- sm3
+
 # Test
 
 ```
