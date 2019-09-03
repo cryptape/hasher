@@ -1,4 +1,4 @@
-use libsm;
+use cryptape_sm as libsm;
 
 use crate::Hasher;
 

@@ -11,10 +11,10 @@ documentation = "https://github.com/cryptape/hasher/blob/master/README.md"
 [dependencies]
 tiny-keccak = { version = "1.4", optional = true }
 blake2b-rs = { version = "0.1", optional = true }
-libsm = { git = "https://github.com/cryptape/libsm", rev = "4d0e6199fca0934c58131de1d0036e9aa4da26c1", optional = true }
+cryptape-sm = { version = "0.3", optional = true }
 
 [features]
 default = []
 hash-keccak = ["tiny-keccak"]
 hash-blake2b = ["blake2b-rs"]
-hash-sm3 = ["libsm"]
+hash-sm3 = ["cryptape-sm"]
