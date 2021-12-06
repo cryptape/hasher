@@ -1,4 +1,5 @@
 use tiny_keccak;
+use tiny_keccak::Hasher as H;
 
 use crate::Hasher;
 
@@ -14,6 +15,10 @@ impl Hasher for HasherKeccak {
     const LENGTH: usize = 32;
 
     fn digest(&self, data: &[u8]) -> Vec<u8> {
-        tiny_keccak::keccak256(data).to_vec()
+        let mut hasher = tiny_keccak::Keccak::v256();
+        let mut result: [u8; 32] = [0; 32];
+        hasher.update(data);
+        hasher.finalize(&mut result);
+        result.to_vec()
     }
 }

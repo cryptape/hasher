@@ -1,6 +1,6 @@
 [package]
 name = "hasher"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Cryptape Technologies <contact@cryptape.com>"]
 edition = "2018"
 description = "Package hasher provides a Hasher trait."
@@ -9,7 +9,7 @@ homepage = "https://github.com/cryptape/hasher"
 documentation = "https://github.com/cryptape/hasher/blob/master/README.md"
 
 [dependencies]
-tiny-keccak = { version = "1.4", optional = true }
+tiny-keccak = { version = "2.0", features = ["keccak"], optional = true }
 blake2b-rs = { version = "0.1", optional = true }
 cryptape-sm = { version = "0.3", optional = true }
 
