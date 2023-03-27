@@ -2,6 +2,7 @@ use blake2b_rs;
 
 use crate::Hasher;
 
+#[derive(Debug)]
 pub struct HasherBlake2B {
     k: Vec<u8>,
 }
