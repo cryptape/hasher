@@ -2,11 +2,12 @@ use cryptape_sm as libsm;
 
 use crate::Hasher;
 
-pub struct HasherSM3 {}
+#[derive(Debug)]
+pub struct HasherSM3;
 
 impl HasherSM3 {
     pub fn new() -> Self {
-        Self {}
+        Self
     }
 }
 

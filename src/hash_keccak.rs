@@ -3,11 +3,12 @@ use tiny_keccak::Hasher as H;
 
 use crate::Hasher;
 
-pub struct HasherKeccak {}
+#[derive(Debug)]
+pub struct HasherKeccak;
 
 impl HasherKeccak {
     pub fn new() -> Self {
-        Self {}
+        Self
     }
 }
 
